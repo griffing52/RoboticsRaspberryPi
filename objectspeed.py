@@ -30,7 +30,7 @@ def lastEvent():
 	global lastActive
 	global firstTime
 	if firstTime != 0 and not(lastActive):
-		#print("bottom activated")
+		# calculate fps
 		lastActive = True
 		timeDiff = time.time() - firstTime
 		final = config.lightSensorDistance/timeDiff/12
@@ -48,9 +48,13 @@ def lastEvent():
 			print("custom")
 
 		final = round(final, 2)
+
+		# data is written to logFile
 		newArr = logFile.read("all")
 		newArr.insert(0,{"value": final, "time": log.time()})
 		logFile.write("all", newArr)
+
+		# prints and returns text value
 		print(final)
 		return final
 

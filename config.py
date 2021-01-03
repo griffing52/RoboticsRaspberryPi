@@ -3,8 +3,9 @@ lastInput = 24
 firstInput = 23
 
 #loop variables
-# loopDelay = 0.00001 # delay between each running the loop function in seconds
-loopDelay = 0.01 # delay between each running the loop function in seconds
+loopDelay = 0.00001 # delay between each running the loop function in seconds
+
+mainRunsLoop = True # True if you want to run function over loop. False if you want to use callback function on sensor  
 
 #file specific variables
 logFilePath = "/home/pi/Documents/log.json"
@@ -23,7 +24,13 @@ def customConversion(x): # ex. feet per second to meters per second; change nume
 displayWidth = 470
 displayHeight = 266
 fontSize = 20
-recentBalls = 5 # amount of balls displayed on the userinterface as well as recorded in the recents array in log.json
 
 #tests
 test = 3
+
+
+
+
+
+if (mainRunsLoop):
+    loopDelay = 0.01

@@ -1,23 +1,25 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # chmod +x main.py
 
 import config
 
 from time import sleep
-# from objectspeed import checkSpeed
-import objectspeedcopy as osc
+from objectspeed import checkSpeed
+import objectspeedcallback as osc
 
 def initial():
     """Run commands on main.py startup"""
     print("Starting...")
-    osc.setup()
-
+    if (not(config.mainRunsLoop)):
+        osc.setup()
 
 #run loop commands
 def loop():
     """Run loop commands with a delay set in conifg.py (loopDelay)"""
-    osc.reset() 
-    # checkSpeed()
+    if (config.mainRunsLoop):
+        checkSpeed()
+    else: 
+        osc.reset() 
 
 initial()
 
