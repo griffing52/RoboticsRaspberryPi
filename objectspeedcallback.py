@@ -61,10 +61,10 @@ def setup():
 	first.when_pressed = firstEvent
 
 
-def reset():
+def reset(x):
 	global firstTime
 	if (firstTime != None):
-		if (time.time() - firstTime > 4):
+		if (time.time() - firstTime > x):
 			print("firstTime back to None")
 			firstTime = None
 	else:

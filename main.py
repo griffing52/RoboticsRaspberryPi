@@ -19,7 +19,7 @@ def loop():
     if (config.mainRunsLoop):
         checkSpeed()
     else: 
-        osc.reset() 
+        osc.reset(config.timeoutTime) 
 
 initial()
 

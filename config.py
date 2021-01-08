@@ -4,6 +4,8 @@ firstInput = 23
 
 #loop variables
 loopDelay = 0.00001 # delay between each running the loop function in seconds
+timeoutTime = 4 # time before variables reset themselves in seconds
+
 
 mainRunsLoop = True # True if you want to run function over loop. False if you want to use callback function on sensor  
 

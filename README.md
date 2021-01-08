@@ -30,7 +30,10 @@ from objectspeed import checkSpeed
 ```
 ```python
 def loop():
-    checkSpeed() # adding checkSpeed function to the loop from objectspeed file
+  if (config.mainRunsLoop):
+        checkSpeed() # if config is set to run check speed, it will add checkSpeed function to the loop from objectspeed file
+    else: 
+        osc.reset(config.timeoutTime) # if config is set to run sensor callback function, a timeout is set to reset variables after config.timeoutTime in seconds
 ```
 
 ## config.py
