@@ -1,5 +1,9 @@
 # RoboticsRaspberryPi
 
+# Doc and code is not up to date
+## Note for future: https://raspberrypi.stackexchange.com/questions/89732/run-a-script-at-shutdown-on-raspbian
+## maybe make it so everytime raspberry pi is shutdown, log file is sent as an email 
+
 2 light sensors display the speed of an object moving in front of it in feet per second (this can be changed). The 5 most recent speeds are displayed on the user interface.
 
 # Setup
